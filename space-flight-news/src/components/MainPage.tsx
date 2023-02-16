@@ -29,7 +29,12 @@ const MainPage = () => {
   return (
     <>
         <ArticleList articles = {articles}/>
-        <ArticleCard article={articles[0]}/>    </>
+        <Container>
+            <Row>
+                <Col lg={2}><ArticleCard article={articles[0]}/></Col>
+            </Row>
+        </Container>
+    </>
   )
 }
 
