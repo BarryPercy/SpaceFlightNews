@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Container, Row, Col, Card } from 'react-bootstrap'
-import {IArticles} from '../interfaces/IArticle'
+import {IArticle} from '../interfaces/IArticle'
 import ArticleList from './ArticleList'
 import ArticleCard from './ArticleCard'
 
 const MainPage = () => {
   const URL = 'https://api.spaceflightnewsapi.net/v3/articles'
-  const [articles,setArticles] = useState<IArticles[]>([])
+  const [articles,setArticles] = useState<IArticle[]>([])
 
   const fetchArticles = async () => {
     try {

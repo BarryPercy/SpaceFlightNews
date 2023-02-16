@@ -1,4 +1,4 @@
-import { IArticles } from "../interfaces/IArticle"
+import { IArticle } from "../interfaces/IArticle"
 import { Container, Row, Col } from "react-bootstrap"
 import { useEffect } from "react"
 

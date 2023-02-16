@@ -1,8 +1,8 @@
-import { IArticles } from "../interfaces/IArticle"
+import { IArticle } from "../interfaces/IArticle"
 import {Card} from 'react-bootstrap'
 
 interface ArticleCardProps{
-    articles:IArticle
+    article:IArticle
 }
 const ArticleCard = (props: ArticleCardProps)=>{
     return(
