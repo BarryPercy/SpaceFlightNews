@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col, Card, Image } from 'react-bootstrap'
 import {IArticle} from '../interfaces/IArticle'
 import ArticleList from './ArticleList'
 import ArticleCard from './ArticleCard'
@@ -28,10 +28,22 @@ const MainPage = () => {
 
   return (
     <>
-        <ArticleList articles = {articles}/>
-        <Container>
+        
+        <Container fluid>
             <Row>
-                <Col lg={2}><ArticleCard article={articles[0]}/></Col>
+                <Col lg={5}>
+                    <ArticleList articles = {articles}/>
+                </Col>
+                <Col lg={7}>
+                    <Image className="rocket" src="spaceflight.png"></Image>
+                </Col>
+            </Row>
+            <Row>
+            {articles.map((article)=>{
+                        return(
+                            <Col lg={3} key={article.id}><ArticleCard article={article}/></Col>
+                        )
+                    })}    
             </Row>
         </Container>
     </>
